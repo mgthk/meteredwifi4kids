@@ -6,12 +6,12 @@ Use case
 Materials:
 
 Hardware:
-1. A Raspberry Pi 3B (tested Ok) or above with a microSD card
+1. A Raspberry Pi3B (used in this setup) or above with a microSD card large enough to host the Raspbian
 2. PN532 based NFC card reader (I2C bus capable, able to take 5V power input)
 3. Mifare Classic or NTag 213 (216 should work too)
 4. 16x2 or 20x4 LCD using I2C bus (able to take 5V power input)
 5. breadboard, 1-to-many I2C extender or similar extender
-6. At least 12 pieces of Dupont wires
+6. At least 12 pieces of Dupont wires (gender of the connectors depend on the I2C extender used)
 7. A LAN cable
 8. Broadband connection
 
@@ -19,6 +19,10 @@ Software:
 1. Raspbian
 2. raspap-webgui
 3. py532lib
+
+Reference setup:
+
+Please refer to the photos in photo folder for the reference setup in action.
 
 Preflight check:
 
@@ -38,7 +42,7 @@ Setup Procedures:
 
 PN532 (adopted from https://blog.stigok.com/2017/10/12/setting-up-a-pn532-nfc-module-on-a-raspberry-pi-using-i2c.html)
 
-1. Connect the Pi3's 5V, GND, SDA and SCL to breadboard, 1-to-many I2C extender or similar extender
+1. Connect the Pi3B's 5V, GND, SDA and SCL to breadboard, 1-to-many I2C extender or similar extender
 
 2. Connect PN532's 5V, GND, SDA and SCL to breadboard, 1-to-many I2C extender or similar extender
 
@@ -122,7 +126,7 @@ Install raspap-webgui
 
 2. wget -q https://git.io/voEUQ -O /tmp/raspap && bash /tmp/raspap
 
-3. follow on screen instructions to complete raspap-webgui setup and reboot the Pi3.
+3. follow on screen instructions to complete raspap-webgui setup and reboot the Pi3B.
 
 4. Remember to login to raspap-webgui (use browser and via LAN connection) to do the followings:
 a. update SSID and password for WiFi access point
@@ -172,7 +176,7 @@ Test run
 1. Remove the card from PN532
 2. cd ~/py532lib
 3. run "python3 meteredwifi4kids.py"
-4. Use smart phone or a notebook computer with WiFi turned on to verify the SSID you have chosen for your Pi3 is NOT availab.e
+4. Use smart phone or a notebook computer with WiFi turned on to verify the SSID you have chosen for your Pi3B is NOT available
 5. Put the card on the PN532 and wait a few seconds
 6. Check the smart phone or notebook computer again to see if the SSID is available now
 7. Remove the card and wait about 15 to 30seconds. The SSID should be disappeared.
