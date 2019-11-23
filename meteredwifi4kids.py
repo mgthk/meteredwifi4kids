@@ -101,7 +101,7 @@ def updateLCD():
     else:
        wifi_status = "Off"
        
-    lcdMsg1 = "Wifi " + wifi_status + ". " + str(wifi_usage_remain_minute) + " min"
+    lcdMsg1 = "Wifi " + wifi_status + ". " + str(wifi_usage_remain_minute) + " min "
 
     mylcd.lcd_display_string(lcdMsg1, 1)
 
