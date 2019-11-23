@@ -1,4 +1,4 @@
-# meteredwifi4kids
+# Metered WiFi For Kids
 Use case
 
   Use NFC access card to activate WiFi hotspot on Raspberry Pi 3 until daily credit (in minutes) used up. Good for letting kids to use WiFi on their own schedule while limiting the amount of time spending on the Internet.
