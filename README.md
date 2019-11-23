@@ -36,7 +36,7 @@ sudo apt upgrade
 </pre>
 5. Password of pi has been changed, preferably to a complex one
 6. Disable auto-login to GUI console (quite optional, depends on age of the kids and if you believe that they don't know how to connect the Pi to TV and using USB keyboard and mouse to poke around.) 
-7. Make sure the Pi3B has been disconnected from power supply before plugging or unpluggin dupont wires to prevent risk of causing any damage in event of wrong cable connection.
+7. Make sure the Pi3B has been disconnected from power supply before plugging or unplugging dupont wires to prevent risk of causing any damage in event of wrong cable connection.
 
 Setup Procedures:
 
@@ -129,9 +129,10 @@ Install raspap-webgui
 3. follow on screen instructions to complete raspap-webgui setup and reboot the Pi3B.
 
 4. Remember to login to raspap-webgui (use browser and via LAN connection) to do the followings:
+<pre>
 a. update SSID and password for WiFi access point
 b. update administrator login and password for raspap-webgui
-
+</pre>
 5. Reboot if needed
 
 Install meteredwifi4kids
@@ -169,17 +170,19 @@ cd /home/pi/py532lib
 9. Press a few times of Ctrl-C to break the program
 10. vi authorizedcard
 11. replace the sample ID with the one you noted down at step 10
-12. save and exit
+12. vi authorizedwifitime
+13. update the wifi access time you would like the kids to have. Default is 90 minutes.
+14. save and exit
 
 Test run
 
-1. Remove the card from PN532
+1. Remove the NFC card from PN532
 2. cd ~/py532lib
 3. run "python3 meteredwifi4kids.py"
 4. Use smart phone or a notebook computer with WiFi turned on to verify the SSID you have chosen for your Pi3B is NOT available
-5. Put the card on the PN532 and wait a few seconds
+5. Put the NFC card on the PN532 and wait a few seconds
 6. Check the smart phone or notebook computer again to see if the SSID is available now
-7. Remove the card and wait about 15 to 30seconds. The SSID should be disappeared.
+7. Remove the card and wait about 15 to 30 seconds. The SSID should be disappeared.
 
 Put it into action
 
@@ -189,7 +192,7 @@ Put it into action
 
 Known Issues
 
-1. Daily remaining usage count files (file name in yyyymmdd format) are located at /home/pi/py532lib. You may set a crontab job to clean them regularly.
+1. Daily remaining usage count files (file name in yyyymmdd format) are located at /home/pi/py532lib. You may want to set a crontab job to clean them regularly.
 
 Trouble Shooting
 
